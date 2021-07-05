@@ -32,3 +32,15 @@ p{
     padding-bottom: 60%;
 
    }
+
+.remove_btn{
+    float: right;
+    color: red;
+    font-weight: 700;
+    text-decoration: none;
+}
+.remove_btn:hover{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
