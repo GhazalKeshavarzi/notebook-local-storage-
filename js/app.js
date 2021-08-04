@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 /************************************ VARIABLES *******************************/
+=======
+//VARIABLES
+>>>>>>> f4a14e1b6d95547e3e417c91c4f2234d49eb6609
 const doList=document.querySelector('#result');
 
 
 
+<<<<<<< HEAD
 /********************************** EVENTLISTENERS*****************************/
+=======
+//EVENTLISTENERS
+>>>>>>> f4a14e1b6d95547e3e417c91c4f2234d49eb6609
 eventListeners();
 function eventListeners() {
     //submission
@@ -11,24 +19,34 @@ function eventListeners() {
 
     //delete note
     document.querySelector('#dolist').addEventListener('click',deleteNote);
+<<<<<<< HEAD
 
     //show datas
     document.addEventListener('DOMContentLoaded',loadeDataFromLS);
 
 
+=======
+>>>>>>> f4a14e1b6d95547e3e417c91c4f2234d49eb6609
 }
 
 
 
 
+<<<<<<< HEAD
 /************************************* FUNCTIONS **************************************/
 
 //------------------------- ADD NOTE TO THE LIST--------------------------
 
+=======
+//FUNCTIONS
+
+//add note to the list
+>>>>>>> f4a14e1b6d95547e3e417c91c4f2234d49eb6609
 function addNote(e) {
     e.preventDefault();
     const note=document.querySelector('#notebook1').value;
 
+<<<<<<< HEAD
     // create <li> tag
     const li=document.createElement('li');
     li.appendChild(document.createTextNode(note));
@@ -50,10 +68,29 @@ function addNote(e) {
 
 //------------------------ DELETE NOTE FROM LIST --------------------------
 
+=======
+    // create remove buttton
+    const remove=document.createElement("a");
+    remove.textContent='X';
+    remove.classList='remove_btn';
+    console.log(remove);
+
+    // create <li> tag
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode(note));
+    li.appendChild(remove);
+
+    //add the lis to the do list
+    doList.appendChild(li);
+
+
+}
+>>>>>>> f4a14e1b6d95547e3e417c91c4f2234d49eb6609
 function deleteNote(e) {
     if (e.target.classList.contains('remove_btn')) {
         e.target.parentElement.remove();
     }
+<<<<<<< HEAD
     removeDataFromLS(e.target.parentElement.textContent);
 }
 
@@ -114,3 +151,6 @@ function loadeDataFromLS() {
      });
      localStorage.setItem('datas',JSON.stringify(arrayData));
  }
+=======
+}
+>>>>>>> f4a14e1b6d95547e3e417c91c4f2234d49eb6609
